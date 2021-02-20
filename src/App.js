@@ -12,7 +12,6 @@ function App() {
           <Route exact path='/' component = {Dashboard} />
           <Route path='/project/:id' component={ProjectDetails} />
         </Switch>
-
       </div>
     </BrowserRouter>
   );
