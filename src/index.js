@@ -17,15 +17,29 @@ const store = createStore(rootReducer,
   )
   );
 
+const profileSpecificProps = {
+    userProfile: 'users',
+    useFirestoreForProfile: true,
+    enableRedirectHandling: false,
+    resetBeforeLogin: false
+  }
+
 const rrfProps = {
+    firebase,
+    config: profileSpecificProps, //CHANGE GOES HERE
+    dispatch: store.dispatch,
+    createFirestoreInstance
+  };
+/*const rrfProps = {
     firebase,
     config: firebaseConfig,
     dispatch: store.dispatch,
     createFirestoreInstance,
     userProfile: 'users', // where profiles are stored in database
+    useFirestoreForProfile: true,
     presence: 'presence', // where list of online users is stored in database
     sessions: 'sessions'
-  };
+  };*/
 
   function AuthIsLoaded({ children }) {
 
