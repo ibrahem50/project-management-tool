@@ -11,7 +11,7 @@ const Navbar = (props) => {
         <nav className="nav-wrapper grey darken-4">
             <div className="container">
                 <Link to='/'>OurPlan</Link>
-                {links}
+                {auth.isLoaded && links}
             </div>
         </nav>
      );
