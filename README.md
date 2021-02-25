@@ -1,4 +1,5 @@
-#project management tool
+# project management tool
+
 simple project management tool with authentication using reactjs, redux, firebase.
 
 # Getting Started with Create React App
